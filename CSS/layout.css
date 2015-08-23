@@ -1,0 +1,22 @@
+/* mobile */
+[class*="col-"] {
+    width: 100%;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* tablets */
+    body {width: 50%;}
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* desktop */
+    body {width: 20%;}
+}
+
+#data-role.header 
+{
+    background-color: crimson;
+}

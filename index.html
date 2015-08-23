@@ -1,0 +1,478 @@
+<!------------------------
+    Michael Krull  
+    210605366
+    SIT313 Assignment 1
+
+References:
+- Reid J, 2011, O’Reilly Media Inc, JQuery Mobile, retrieved 10 August 2015, 
+"http://yuliana.lecturer.pens.ac.id/Android/Buku/jQuery-Mobile.pdf"
+
+- w3schools, 2015, JQuery Mobile, HTML, CSS, retrieved 19 August 2015, 
+http://www.w3schools.com/default.asp
+--------------------------->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Mobile Application</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Used to fit the content the size of the mobile screen -->
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+            <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="CSS/layout.css">
+    </head> 
+    <body > 
+        <div class="col-1 col-m-1">
+        <!------------------------------------------------------->
+        <!--Home-->
+        <section id="home" data-role="page" >
+            <div id="menuPanel" data-role="panel" id="overlayPanel" data-display="overlay"> <!--Create a menu panel using JQuery Mobile panel widget that slides from the side -->
+                    <h2>Babba's Pizza</h2>
+                        <br />
+                    <ul data-role="listview"> <!-- Creat a mobile list view that can be used as button links -->
+                        <li><a href ="#home" data-transition="slide">home</a></li>  <!-- Using JQuery Mobile slide transition -->
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul> 
+            </div>
+        
+            <header data-role="header"> <!-- Use of the JQuery Mobile header -->
+                <h1>Babba's Pizza</h1>
+                <a href ="#menuPanel"> = </a>
+            </header> 
+            <div class="content" data-role="content">  <!-- Using JQuery mobile content widget -->
+                <ul data-role="listview">
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul> 
+            </div>
+            <footer data-role="footer">  <!-- Use of the JQuery Mobile footer -->
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+        <!------------------------------------------------------->
+        <!--Food Menu-->
+        <section id="menu" data-role="page">
+            <div id="menuPanel" data-role="panel" id="overlayPanel" data-display="overlay">
+                    <h2>Babba's Pizza</h2>
+                        <br />
+                    <ul data-role="listview">
+                        <li><a href ="#home" data-transition="slide">home</a></li>
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul>
+            </div>
+            <header data-role="header">
+                <h1>Babba's Pizza</h1>
+                <a href ="#menuPanel"> = </a>
+            </header> 
+            <div class="content" data-role="content">
+                <h3 align="center">Menu</h3>
+                <p>Check out our mouth watering meals</p>
+                <p>We have a wide selection of pizza's, pasta's and a few new creations by Babba himself.</p>
+                <br />
+                <ul data-role="listview">
+                    <li><a href ="#creations" data-transition="slide">Babba's Creations</a></li>
+                    <li><a href ="#pizza" data-transition="slide">Pizza</a></li> 
+                    <li><a href ="#pasta" data-transition="slide">Pasta</a></li> 
+                </ul> 
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+        <!------------------------------------------------------->
+        <!--About-->
+        <section id="about" data-role="page">
+            <div id="menuPanel" data-role="panel" id="overlayPanel" data-display="overlay">
+                    <h2>Babba's Pizza</h2>
+                        <br />
+                    <ul data-role="listview">
+                        <li><a href ="#home" data-transition="slide">home</a></li>
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul> 
+            </div>
+            <header data-role="header">
+                <h1>Babba's Pizza</h1>
+                <a href ="#menuPanel"> = </a>
+            </header> 
+            <div class="content" data-role="content">
+                <h3 align="center">About</h3>
+                <p>Paul Babba started his pizza store 12yrs ago in his little town of basil, Italy. 
+                There he perfected his well known smoked pizza sauce, which only he and a select few
+                family members know the recipe</p>
+                
+                <p>Babba owes the success of his franchise to his devoted customers.  He tries to thank
+                them by creating new sauces and dishes monthly.</p>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+        <!------------------------------------------------------->
+        <!--Location-->
+        <section id="location" data-role="page">
+            <div id="menuPanel" data-role="panel" id="overlayPanel" data-display="overlay">
+                    <h2>Babba's Pizza</h2>
+                        <br />
+                    <ul data-role="listview">
+                        <li><a href ="#home" data-transition="slide">home</a></li>
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul>
+            </div>
+            <header data-role="header">
+                <h1>Babba's Pizza</h1>
+                <a href ="#menuPanel"> = </a>
+            </header> 
+            <div class="content" data-role="content">
+                <h3 align="center">Location</h3>
+                <div class="ui-grid-a">  <!-- Using JQuery Mobile to create a grid to place content in -->
+                    <div class="ui-block-a">
+                        <p>Babba's Pizza<br />Oconnors Rd<br /> Werribee South<br /> VIC<br /> 3030</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <img src="images/map_location.jpg" alt="map location of Babba's Pizza">
+                    </div>
+                </div>
+                <!-- Using JQuery Mobile to create a button out of the two links below -->
+                <a href="https://www.google.com.au/maps/place/Oconnors+Rd,+Werribee+South+VIC+3030/@-37.952145,144.6972612,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad6841de4984c7b:0xfec2500ec995136b?hl=en"
+                        class="ui-btn ui-icon-location ui-btn-icon-left">Location on Google Maps</a>
+                <a href="tel:1234567890" class="ui-btn ui-icon-phone ui-btn-icon-left">Call Babba's Pizza</a>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+        <!------------------------------------------------------->
+        <!--Feedback-->
+        <section id="feedback" data-role="page">
+            <div id="menuPanel" data-role="panel" id="overlayPanel" data-display="overlay">
+                    <h2>Babba's Pizza</h2>
+                        <br />
+                    <ul data-role="listview">
+                        <li><a href ="#home" data-transition="slide">home</a></li>
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul> 
+            </div>
+            <header data-role="header">
+                <h1>Babba's Pizza</h1>
+                <a href ="#menuPanel"> = </a>
+            </header> 
+            <div class="content" data-role="content">
+                <h3 align="center">Feedback</h3>
+                <form method="post" action="feedback.asp">
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+                    <input type="email" name="emailaddress" id="email" placeholder="Email Address">
+                    <textarea name="comment" id="comment" placeholder="Your Comments"></textarea>
+                    <a href="mailto:assign@ment.com" class="ui-btn">Send</a>
+                </form>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+        <!------------------------------------------------------->   
+        <!--Developer-->
+        <section id="developer" data-role="page">
+            <div id="menuPanel" data-role="panel" id="overlayPanel" data-display="overlay">
+                    <h2>Babba's Pizza</h2>
+                        <br />
+                    <ul data-role="listview">
+                        <li><a href ="#home" data-transition="slide">home</a></li>
+                        <li><a href ="#menu" data-transition="slide">Menu</a></li> 
+                        <li><a href ="#about" data-transition="slide">About</a></li> 
+                        <li><a href ="#location" data-transition="slide">Location</a></li>
+                        <li><a href ="#feedback" data-transition="slide">Feedback</a></li>
+                        <li><a href ="#developer" data-transition="slide">Developer</a></li>
+                    </ul> 
+            </div>
+            <header data-role="header">
+                <h1>Babba's Pizza</h1>
+                <a href ="#menuPanel"> = </a>
+            </header> 
+            <div class="content" data-role="content">
+                <h3 align="center">Developer Information</h3> 
+                <p align="center">Michael Krull <br />Interactive Media Designer<br />m.krull@hello.com<br /></p>
+                
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+            
+        <!--Menu-->
+        <!---=====================================================================-->
+        
+        <!--Babba's Creations -->
+            
+        <section id="creations" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <!-- Using JQuery Mobile to create a back button (below) along with the reverse slide transition -->
+                <a href ="#menu" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a> 
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Babba's Creations</h3>
+                <ul data-role="listview">
+                    <li><a href ="#porkcapsicum" data-transition="slide">Pork Capsicum</a></li>
+                    <li><a href ="#beantoast" data-transition="slide">Baked Bean Avocado Toast</a></li> 
+                </ul> 
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+            
+        <!--Pizza -->
+            
+        <section id="pizza" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#menu" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Pizza</h3>
+                <ul data-role="listview">
+                    <li><a href ="#hawaiian" data-transition="slide">Hawaiian</a></li>
+                    <li><a href ="#meatlovers" data-transition="slide">Meat Lover's</a></li> 
+                </ul> 
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+            
+        <!--Pasta -->
+            
+        <section id="pasta" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#menu" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Pasta</h3>
+                <ul data-role="listview">
+                    <li><a href ="#carbonara" data-transition="slide">Carbonara</a></li> 
+                    <li><a href ="#penne" data-transition="slide">Penne</a></li> 
+                </ul> 
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+            
+            
+        <!--Recipes-->
+        <!---=====================================================================-->
+        
+        <!----------------->
+        <!--Pork Capsicum-->
+        <!----------------->
+        <section id="porkcapsicum" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#creations" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Pork Capsicum</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <ul>
+                            <li>Pork</li>
+                            <li>Capsicum</li>
+                            <li>Cherry Tomatoes</li>
+                        </ul> 
+                    </div>
+                    <div class="ui-block-b">
+                        <ul>
+                            <li>Onion</li>
+                            <li>Sweet and Sour Sauce</li>
+                            <li>Rice</li>
+                        </ul> 
+                    </div>
+                    <p><img src="images/porkCapsicum.jpg" alt="bowl of pork, capsicum and vegetables on rice"></p>
+                </div>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+         
+        <!---------------------------->    
+        <!--Baked Bean Avacado Toast-->
+        <!---------------------------->
+        <section id="beantoast" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#creations" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Baked Beans &amp Avacado on Toast</h3>
+                <p>
+                        <ul>
+                            <li>Baked Beans</li>
+                            <li>Avacado</li>
+                            <li>Toast</li>
+                        </ul> 
+                        <img src="images/beanToast.jpg" alt="Baked Beans and Avacado on Toast">
+                </p>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+            
+        <!------------->    
+        <!--Carbonara-->
+        <!------------->
+        <section id="carbonara" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#pasta" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Carbonara</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <ul>
+                            <li>Pasta</li>
+                            <li>Bacon</li>
+                            <li>Mushrooms</li>
+                        </ul> 
+                    </div>
+                    <div class="ui-block-b">
+                        <ul>
+                            <li>Peas</li>
+                            <li>Chicken</li>
+                            <li>Creamy Sauce</li>
+                        </ul> 
+                    </div>
+                    <p><img src="images/carbonara.jpg" alt="bowl of pork, capsicum and vegetables on rice"></p>
+                </div>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+            
+        <!--------->    
+        <!--Penne-->
+        <!--------->
+        <section id="penne" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#pasta" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Tomatoe Penne</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <ul>
+                            <li>Penne Pasta</li>
+                            <li>Mushrooms</li>
+                            <li>Spinach</li>
+                        </ul> 
+                    </div>
+                    <div class="ui-block-b">
+                        <ul>
+                            <li>Onion</li>
+                            <li>Celery</li>
+                            <li>Pasta Sauce</li>
+                        </ul> 
+                    </div>
+                    <p><img src="images/penne.jpg" alt="bowl of pork, capsicum and vegetables on rice"></p>
+                </div>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+        
+        
+        <!------------------>    
+        <!--Hawaiian Pizza-->
+        <!------------------> 
+        <section id="hawaiian" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#pizza" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Hawaiian Pizza</h3>
+                <p>
+                        <ul>
+                            <li>Ham</li>
+                            <li>Pineapple</li>
+                            <li>Cheese</li>
+                        </ul> 
+                </p>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+        <!---------------------->    
+        <!--Meat Lover's Pizza-->
+        <!---------------------->
+        <section id="meatlovers" data-role="page">
+            <header data-role="header">
+            <h1>Babba's Pizza</h1>
+                <a href ="#pizza" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Back</a>
+            </header>
+            <div class="content" data-role="content">
+                <h3 align="center">Meat Lover's Pizza</h3>
+                <p>
+                        <ul>
+                            <li>Salami</li>
+                            <li>Ham</li>
+                            <li>Mince</li>
+                            <li>Sausage</li>
+                            <li>BBQ Sauce</li>
+                            <li>Pizza Sauce</li>
+                            <li>Cheese</li>
+                        </ul> 
+                </p>
+            </div>
+            <footer data-role="footer">
+                <h1>&copy Babba's Pizza</h1>
+            </footer> 
+        </section>
+            
+        </div>        
+    </body>
+</html>
